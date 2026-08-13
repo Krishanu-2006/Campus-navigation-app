@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Navigation System</title>
+
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+
+    <!-- Leaflet Routing Machine CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    >
+
+
+    <!-- Custom CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>🎓 Campus Navigation System</h1>
+
+            <p>Find Your Destination Quickly & Easily</p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Search Panel -->
+
+    <section class="control-panel">
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search GNIT, Library, Canteen..."
+            autocomplete="off"
+        >
+
+        <div id="suggestions"></div>
+
+    </div>
+
+
+    <button id="searchBtn">
+        🔍 Search
+    </button>
+
+
+    <button id="locationBtn">
+        📍 My Location
+    </button>
+
+</section>
+
+
+
+    <!-- Information Card -->
+
+    <section class="info-card">
+
+        <h3>📍 Navigation Details</h3>
+
+        <p>
+            <strong>Destination:</strong>
+
+            <span id="destination">
+                Not Selected
+            </span>
+        </p>
+
+
+        <p>
+            <strong>Distance:</strong>
+
+            <span id="distance">
+                --
+            </span>
+        </p>
+
+
+        <p>
+            <strong>Estimated Time:</strong>
+
+            <span id="time">
+                --
+            </span>
+        </p>
+
+    </section>
+
+
+
+    <!-- Map -->
+
+    <div id="map"></div>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Campus Navigation System |
+            Hackathon Project
+        </p>
+
+    </footer>
+
+
+
+    <!-- Leaflet JS -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+
+
+    <!-- Leaflet Routing Machine JS -->
+
+    <script
+        src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js">
+    </script>
+
+
+
+    <!-- Custom JavaScript -->
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+
+</body>
+
+</html>
